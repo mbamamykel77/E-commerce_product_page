@@ -5,15 +5,18 @@ let increment = document.querySelector('.increment')
 let decrement = document.querySelector('.decrement')
 let button = document.querySelector('.button')
 let pop_up = document.querySelector('.pop_up')
+let images = document.querySelectorAll('.images')
+let mainImg = document.querySelector('.box_image')
 
 
-// Add increment and decrement function
+// Add increment
 function incrementBtn(){
     counter++;
     display.textContent = counter;
 }
 increment.addEventListener('click', incrementBtn)
 
+// Add decrement
 function decrementBtn(){
     if (counter !== 0) {
         counter--;
@@ -36,3 +39,11 @@ function addCart(){
     }
 }
 button.addEventListener('click', addCart)
+
+
+// Looping through the image
+ for (let i = 0; i < images.length; i++){
+    images[i].addEventListener('click', function(){
+        mainImg.src = this.src
+    })
+ }
