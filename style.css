@@ -15,8 +15,8 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   padding-bottom: 2rem;
 }
-a{
-   text-decoration: none;
+a {
+  text-decoration: none;
 }
 .header {
   display: flex;
@@ -57,8 +57,40 @@ a{
 .mainImg img {
   width: 100%;
 }
-.grid_img{
-   display: none;
+.grid_img {
+  display: none;
+}
+.pop_up.active {
+  top: 60px;
+}
+.pop_up {
+  background-color: white;
+  margin: 7px;
+  width: 95%;
+  border-radius: 7px;
+  font-weight: bold;
+  position: absolute;
+  top: -220px;
+  left: 0;
+  right: 0;
+  transition: 0.5s ease-in-out;
+  box-shadow: 3px 9px 15px -5px rgb(155, 155, 155);
+}
+.popUp_cart {
+  border-bottom: 1px solid rgb(216, 216, 216);
+  border-bottom-width: 100%;
+  margin-bottom: 2rem;
+}
+.popUp_cart p {
+  padding: 1rem;
+}
+.popUp_empty {
+  padding-bottom: 4rem;
+  color: var(--dark-gray);
+}
+.popUp_empty p {
+  padding: 1rem;
+  text-align: center;
 }
 
 /* text section */
@@ -87,8 +119,8 @@ a{
   /* flex-wrap: wrap; */
   justify-content: space-between;
 }
-.priceCont1{
-   display: flex;
+.priceCont1 {
+  display: flex;
 }
 .p1 {
   font-size: 25px;
@@ -147,8 +179,8 @@ a{
   font-weight: bold;
   margin-top: 8px;
 }
-.button button:hover{
-   opacity: 0.7;
+.button button:hover {
+  opacity: 0.7;
 }
 
 /* desktop design */
@@ -157,6 +189,9 @@ a{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+  }
+  .header{
+   border-bottom: 1px solid rgb(235, 235, 235);
   }
   .menu {
     display: none;
@@ -173,72 +208,79 @@ a{
     margin-right: 1.5rem;
     color: var(--dark-gray);
   }
-  .desktop_menu li:hover{
-   color: black;
-   border-bottom: 2px solid var(--orange-text);
+  .desktop_menu li:hover {
+    color: black;
+    border-bottom: 2px solid var(--orange-text);
   }
-  .main_container{
-   display: flex;
-   justify-content: center;
-   padding: 6rem 0;
+  .main_container {
+    display: flex;
+    justify-content: center;
+    padding: 6rem 0;
   }
 
   /* main image and text */
-  .second_p{
-   font-size: 15px;
+  .second_p {
+    font-size: 15px;
   }
-  .mainImg{
-   width: 30%;
-   margin-right: 4rem;
-   margin-left: 3rem;
+  .mainImg {
+    width: 30%;
+    margin-right: 4rem;
+    margin-left: 3rem;
   }
-  .mainImg img{
-   width: 100%;
-   border-radius: 12px;
-  }
- 
-  .main_text{
-   width: 30%;
-   margin-top: 6rem;
-  }
-  .grid_img{
-   display: contents;
-   display: flex;
-   margin-top: 20px;
-  }
-  .grid_img img{
-   width: 80%;
-   border-radius: 7px;
+  .mainImg img {
+    width: 100%;
+    border-radius: 12px;
   }
 
+  .main_text {
+    width: 30%;
+    margin-top: 6rem;
+  }
+  .grid_img {
+    display: contents;
+    display: flex;
+    margin-top: 20px;
+  }
+  .grid_img img {
+    width: 80%;
+    border-radius: 7px;
+  }
 
   /* counter and button */
-  .cont_btn{
-   display: flex;
-   justify-content: space-between;
-   margin-top: 20px;
+  .cont_btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
   }
-  .counter{
-   width: 35%;
-   height: 3rem;
-   padding-bottom: 3rem;
+  .counter {
+    width: 35%;
+    height: 3rem;
+    padding-bottom: 3rem;
   }
-  .button{
-   width: 60%;
-   margin-top: 22px;
+  .button {
+    width: 60%;
+    margin-top: 22px;
   }
-  .button button{
-   height: 40px;
+  .button button {
+    height: 40px;
   }
-  .price{
-   display: flex;
-   flex-direction: column;
+  .price {
+    display: flex;
+    flex-direction: column;
   }
-  .p2{
-   width: 15%;
+  .p2 {
+    width: 15%;
   }
 
+  .pop_up {
+   width: 25%;
+   /* background-color: gray; */
+   margin-left: 60rem;
+  }
+  .pop_up.active {
+   /* top: 60px; */
+   height: 15rem;
+ }
 
-
-
+  
 }
