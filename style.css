@@ -1,137 +1,244 @@
-  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --dark-gray: hsl(219, 9%, 45%);
+  --orange-text: hsl(26, 100%, 55%);
+  --light-orange: hsl(25, 100%, 94%);
+  --grey: hsl(220, 14%, 75%);
+  --light-grey: hsl(223, 64%, 98%);
+  font-family: "Kumbh Sans", sans-serif;
+  padding-bottom: 2rem;
+}
+a{
+   text-decoration: none;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+}
+.sec1 {
+  display: flex;
+}
+.sec2 {
+  display: flex;
+}
+.menu {
+  margin-top: 3px;
+}
+.desktop_menu {
+  display: none;
+}
+.logo {
+  margin-left: 1rem;
+}
+.cart {
+  margin-right: 1rem;
+}
+.avatar img {
+  width: 1.7rem;
+  margin-top: -2px;
+}
+
+/* main text and image */
+.main_text {
+  width: 100%;
+  padding: 0 1rem;
+}
+.mainImg {
+  margin-top: 0.7rem;
+}
+.mainImg img {
+  width: 100%;
+}
+.grid_img{
+   display: none;
+}
+
+/* text section */
+.first_P {
+  color: var(--orange-text);
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.second_p {
+  line-height: 30px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+.text_p {
+  width: 98%;
+  color: var(--dark-gray);
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+/* price section */
+.price {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+}
+.priceCont1{
+   display: flex;
+}
+.p1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.p2 {
+  background-color: var(--light-orange);
+  color: var(--orange-text);
+  font-weight: bolder;
+  width: 35%;
+  text-align: center;
+  padding: 5px 10px 0px 10px;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+.p3 {
+  font-weight: bold;
+  color: var(--grey);
+  margin-top: 5px;
+}
+
+/* counter */
+.counter {
+  margin-top: 20px;
+  display: flex;
+  padding: 10px 0px;
+  border-radius: 7px;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 19px;
+  color: var(--orange-text);
+  background-color: var(--light-grey);
+  margin-bottom: 10px;
+}
+.increment {
+  font-size: 30px;
+}
+.decrement {
+  font-size: 30px;
+}
+.text_content {
+  color: black;
+  margin-top: 9px;
+}
+
+/* add to cart */
+.button button {
+  background-color: var(--orange-text);
+  color: white;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.button button:hover{
+   opacity: 0.7;
+}
+
+/* desktop design */
+@media (min-width: 760px) {
+  * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .menu {
+    display: none;
+  }
+  .desktop_menu {
+    display: contents;
+  }
+  .desktop_menu ul {
+    display: flex;
+    list-style: none;
+    margin-left: 2rem;
+  }
+  .desktop_menu li {
+    margin-right: 1.5rem;
+    color: var(--dark-gray);
+  }
+  .desktop_menu li:hover{
+   color: black;
+   border-bottom: 2px solid var(--orange-text);
+  }
+  .main_container{
+   display: flex;
+   justify-content: center;
+   padding: 6rem 0;
   }
 
-  body {
-   --dark-gray: hsl(219, 9%, 45%);
-   --orange-text: hsl(26, 100%, 55%);
-   --light-orange: hsl(25, 100%, 94%);
-   --grey: hsl(220, 14%, 75%);
-   --light-grey: hsl(223, 64%, 98%);
-   font-family: 'Kumbh Sans', sans-serif; 
-   padding-bottom: 2rem;
- }
-
- .header{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 1rem;
- } 
- .sec1{
-   display: flex;
- }
- .sec2{
-   display: flex;
- }
- .menu{
-   margin-top: 3px;
- }
- .logo{
-   margin-left: 1rem;
- }
-.cart {
-    margin-right: 1rem;
-}
- .avatar img{
-    width: 1.7rem;
-    margin-top: -2px;
- }
-
- /* main */
- .main_text{
+  /* main image and text */
+  .second_p{
+   font-size: 15px;
+  }
+  .mainImg{
+   width: 30%;
+   margin-right: 4rem;
+   margin-left: 3rem;
+  }
+  .mainImg img{
    width: 100%;
-   padding: 0 1rem;
- }
- .mainImg{
-   margin-top: 0.7rem;
- }
- .mainImg img{
-   width: 100%;
- }
-
- /* text section */
- .first_P{
-   color: var(--orange-text);
-   font-weight: bold;
-   font-size: 16px;
-   margin-top: 10px;
-   margin-bottom: 10px;
- }
- .second_p{
-   line-height: 30px;
-   margin-bottom: 20px;
-   font-size: 13px;
- }
- .text_p{
-   width: 98%;
-   color: var(--dark-gray);
-   margin-bottom: 20px;
-   font-size: 13px;
- }
-
- /* price section */
- .price{
+   border-radius: 12px;
+  }
+ 
+  .main_text{
+   width: 30%;
+   margin-top: 6rem;
+  }
+  .grid_img{
+   display: contents;
    display: flex;
-   /* flex-wrap: wrap; */
-   justify-content: space-between;
- }
- .p1{
-   font-size: 25px;
-   font-weight: bold;
- }
-
- .p2{
-   background-color: var(--light-orange);
-   color: var(--orange-text);
-   font-weight: bolder;
-   width: 15%;
-   text-align: center;
-   padding-top: 5px;
-   border-radius: 5px;
-   margin-left: -3rem;
- }
- .p3{
-   font-weight: bold;
-   color: var(--grey);
-   margin-top: 5px;
- }
-
- /* counter */
- .counter{
    margin-top: 20px;
-   display: flex;
-   padding: 10px 0px;
+  }
+  .grid_img img{
+   width: 80%;
    border-radius: 7px;
-   justify-content: space-around;
-   font-weight: bold;
-   font-size: 19px;
-   color: var(--orange-text);
-   background-color: var(--light-grey);
-   margin-bottom: 10px;
- }
- .increment{
-   font-size: 30px;
- }
- .decrement{
-   font-size: 30px;
- }
- .text_content{
-   color: black;
-   margin-top: 9px;
- }
+  }
 
- /* add to cart */
- .button button{
-   background-color: var(--orange-text);
-   color: white;
-   width: 100%;
-   height: 50px;
-   border: none;
-   border-radius: 7px;
-   font-size: 17px;
-   font-weight: bold;
- }
+
+  /* counter and button */
+  .cont_btn{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+  }
+  .counter{
+   width: 35%;
+   height: 3rem;
+   padding-bottom: 3rem;
+  }
+  .button{
+   width: 60%;
+   margin-top: 22px;
+  }
+  .button button{
+   height: 40px;
+  }
+  .price{
+   display: flex;
+   flex-direction: column;
+  }
+  .p2{
+   width: 15%;
+  }
+
+
+
+
+}
