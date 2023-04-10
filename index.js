@@ -47,3 +47,12 @@ button.addEventListener('click', addCart)
         mainImg.src = this.src
     })
  }
+
+//  menu bar
+function openNav() {
+    document.querySelector('.desktop_menu').style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.querySelector('.desktop_menu').style.width  = "0";
+  }
