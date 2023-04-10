@@ -21,14 +21,20 @@
     justify-content: space-around;
     padding-top: 1rem;
  } 
+ .sec1{
+   display: flex;
+ }
+ .sec2{
+   display: flex;
+ }
  .menu{
    margin-top: 3px;
  }
  .logo{
-   margin-left: -1.5rem;
+   margin-left: 1rem;
  }
 .cart {
-    margin-right: -1.5rem;
+    margin-right: 1rem;
 }
  .avatar img{
     width: 1.7rem;
