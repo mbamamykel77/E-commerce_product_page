@@ -116,31 +116,30 @@ a {
    height: auto;
 }
 
-.filled_cont{
+/* .filled_cont{
    width: 100%;
-}
+} */
 .filled{
    display: flex;
    flex-direction: column;
+   justify-content: center;
     background-color: white;
     margin: 7px;
-    width: 95%;
+    /* width: 95%; */
     border-radius: 7px;
     font-weight: bold;
     position: absolute;
     top: -320px;
     height: auto;
-    /* transition: 0.5s ease-in-out; */
     box-shadow: 3px 9px 15px -5px rgb(155, 155, 155);
 }
 .filledImg{
    width: 15%;
-   /* background-color: gray; */
 }
 .filledImg img{
-   width: 90%;
+   width: 100%;
    border-radius: 5px;
-   margin-left: 0.5rem;
+   margin-left: -0.3rem;
 }
 .filled_cart {
    border-bottom: 1px solid rgb(216, 216, 216);
@@ -153,27 +152,30 @@ a {
  }
   .filled_details {
     display: flex;
+    justify-content: space-around;
     padding-bottom: 4rem;
     color: var(--dark-gray);
   }
   .delete_cont{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .delete_cont img{
     margin-top: 0.5rem;
     cursor: pointer;
-    margin-left: 0.7rem;
+    margin-left: 0.4rem;
   }
   .filled_item {
    width: 100%;
     margin-top: 0.2rem;
-    margin-left: 0.9rem;
   }
   .filled_item p{
     font-size: 15px;
+    margin-left: -1.5rem;
   }
   .filled_price{
-   margin-left: 0.5rem;
+   margin-left: -1.8rem;
   }
   .filled_button{
    width: 100%;
@@ -186,17 +188,18 @@ a {
    width: 16rem;
    height: 45px;
    border: none;
-   border-radius: 7px;
-   font-size: 17px;
+   border-radius: 0.5rem;
+   font-size: 1.3rem;
    font-weight: bold;
    cursor: pointer;
-   margin-left: -1.5rem;
+   margin-left: -3.5rem;
  }
  .filled_button button:hover {
    opacity: 0.7;
  }
  .amount_details{
    display: flex;
+   align-items: center;
    margin-left: 0.3rem;
  }
  .total p{
@@ -255,21 +258,24 @@ a {
 }
 
 /* counter */
-.counter {
-  cursor: pointer;
-  margin-top: 20px;
+
+.counter button{
   display: flex;
-  padding: 10px 0px;
-  border-radius: 7px;
   justify-content: space-around;
-  font-weight: bold;
-  font-size: 19px;
+  width: 100%;
+  border-radius: 7px;
+  border: none;
+  font-size: 16px;
   color: var(--orange-text);
   background-color: var(--light-grey);
-  margin-bottom: 10px;
+  font-weight: bold;
+  margin: 20px 0px 10px 0px;
+  padding: 5px 0px;
+  cursor: pointer;
 }
 .increment {
-  font-size: 30px;
+  font-size: 25px;
+  margin-top: 4px;
 }
 .decrement {
   font-size: 30px;
@@ -334,7 +340,7 @@ a {
   }
   .header {
     border-bottom: 1px solid rgb(235, 235, 235);
-    padding: 2rem 0;
+    padding-top: 2rem;
   }
   .menu {
     display: none;
@@ -346,19 +352,21 @@ a {
   .desktop_menu ul {
     display: flex;
     list-style: none;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
   .desktop_menu a {
-    margin-right: -1.1rem;
+    margin-left: 1.1rem;
     color: var(--dark-gray);
-    margin-top: -0.4rem;
+    margin-top: -0.3rem;
     font-size: 18px;
     font-weight: normal;
+    padding-left: 4px;
   }
   
   .desktop_menu a:hover {
     font-weight: bold;
     color: var(--dark-gray);
+    border-bottom: 2px solid var(--orange-text);
   }
   .desktop_menu .closebtn {
     display: none;
@@ -386,7 +394,13 @@ a {
 
   /* main image and text */
   .second_p {
-    font-size: 15px;
+    font-size: 17px;
+    margin-top: 20px;
+  }
+  .text_p{
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .mainImg {
     width: 40%;
@@ -399,7 +413,7 @@ a {
   }
 
   .main_text {
-    width: 30%;
+    width: 40%;
     margin-top: 1rem;
   }
   .grid_img {
@@ -417,22 +431,32 @@ a {
   }
 
   /* counter and button */
+  .counter button{
+    width: 7rem;
+    font-size: 10px;
+  }
+  .increment {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+  .decrement {
+    font-size: 30px;
+  }
+  .text_content{
+    font-size: 17px;
+  }
   .cont_btn {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 20px;
-  }
-  .counter {
-    width: 35%;
-    height: 3rem;
-    padding-bottom: 3rem;
+    margin-left: -0.7rem;
   }
   .button {
-    width: 60%;
-    margin-top: 22px;
+    width: 50%;
+    margin-top: 13px;
   }
   .button button {
-    height: 40px;
+    height: 45px;
   }
   .price {
     display: flex;
@@ -444,7 +468,6 @@ a {
 
   .pop_up {
     width: 41%;
-    /* background-color: gray; */
     margin-left: 26rem;
   }
   .pop_up.active {
@@ -458,6 +481,9 @@ a {
   .filled_details{
     margin-left: 0.7rem;
   }
+  .filled_button{
+    margin-left: -1rem;
+  }
 }
 @media (min-width: 961px) {
   .pop_up {
@@ -468,6 +494,9 @@ a {
    width: 32%;
    padding-left: 15px;
    margin-left: 42rem;
+  }
+  .filled_details{
+    margin-left: -3px;
   }
 }
 @media (min-width: 1025px) {
@@ -483,6 +512,7 @@ a {
   }
   .main_text {
     margin-top: 3rem;
+    width: 36%;
   }
   .avatar {
     margin-right: -3rem;
@@ -492,5 +522,21 @@ a {
    width: 24%;
    padding-left: 15px;
   }
+  .filled_details{
+    margin-left: -5px;
+  }
+
+  .cont_btn{
+    margin-left: -4rem;
+  }
+  .button {
+    width: 50%;
+    margin-top: 8px;
+    margin-left: -6rem;
+  }
+  .button button {
+    height: 50px;
+  }
+  
 
 }

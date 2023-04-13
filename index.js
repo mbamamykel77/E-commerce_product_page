@@ -2,32 +2,27 @@ let counter = 0;
 
 let display = document.querySelector(".text_content");
 let increment = document.querySelector(".increment");
+
 let decrement = document.querySelector(".decrement");
 let button = document.querySelector(".button");
+
 let pop_up = document.querySelector(".pop_up");
 let images = document.querySelectorAll(".images");
+
 let mainImg = document.querySelector(".box_image");
 let cart = document.querySelector(".cart");
+
 let filledCart = document.querySelector(".filled");
 let itemCount = document.querySelector(".item_count");
+
 let totalAmount = document.querySelector(".total");
 let span = document.querySelector("#span");
+
 let deleteCart = document.querySelector(".delete");
 let checkOut = document.querySelector(".filled_button");
 
-// Delete cart
-function clearCart() {
-  span.style.display = "none";
-  filledCart.classList.remove("active1");
-  filledCart.style.marginTop = "-380px";
-  pop_up.classList.add("active");
-  setTimeout(() => {
-    pop_up.classList.remove("active");
-  }, 3000);
-}
-deleteCart.addEventListener("click", clearCart);
 
-// Add increment
+// function increment
 function incrementBtn() {
   counter++;
   display.textContent = counter;
@@ -36,7 +31,7 @@ function incrementBtn() {
 }
 increment.addEventListener("click", incrementBtn);
 
-// Add decrement
+// function decrement
 function decrementBtn() {
   if (counter !== 0) {
     counter--;
@@ -50,6 +45,18 @@ function decrementBtn() {
 }
 decrement.addEventListener("click", decrementBtn);
 
+// function Delete cart
+function clearCart() {
+    span.style.display = "none";
+    filledCart.classList.remove("active1");
+    filledCart.style.marginTop = "-380px";
+    pop_up.classList.add("active");
+    setTimeout(() => {
+      pop_up.classList.remove("active");
+    }, 3000);
+  }
+  deleteCart.addEventListener("click", clearCart);
+
 // Action when cart is empty
 function addCart() {
   if (counter === 0) {
@@ -62,6 +69,7 @@ function addCart() {
     setTimeout(() => {
       pop_up.classList.remove("active");
     }, 3000);
+
     // decrease cart content with item and init picked
     if (counter !== 0) {
       counter--;
@@ -93,7 +101,7 @@ function cartFilled() {
 }
 cart.addEventListener("click", cartFilled);
 
-// Looping through the image
+// function to select image display
 for (let i = 0; i < images.length; i++) {
   images[i].addEventListener("click", function () {
     mainImg.src = this.src;
