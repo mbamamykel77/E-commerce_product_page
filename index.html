@@ -17,11 +17,20 @@
     <header>
       <div class="header">
         <div class="sec1">
-          <div class="menu"><img src="./images/icon-menu.svg" alt="" onclick="openNav()" /></div>
+          <div class="menu">
+            <img src="./images/icon-menu.svg" alt="" onclick="openNav()" />
+          </div>
           <div class="logo"><img src="./images/logo.svg" alt="" /></div>
           <div class="desktop_menu">
             <ul>
-              <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="closebtn"
+                  onclick="closeNav()"
+                  >&times;</a
+                >
+              </li>
               <li><a href=""> Collection</a></li>
               <li><a href=""> Men </a></li>
               <li><a href=""> Women </a></li>
@@ -34,6 +43,7 @@
         <div class="sec2">
           <div class="cart">
             <img src="./images/icon-cart.svg" alt="" />
+            <span id="span">3</span>
           </div>
           <div class="avatar">
             <img src="./images/image-avatar.png" alt="" />
@@ -41,15 +51,45 @@
         </div>
       </div>
     </header>
-      <!-- pop up message -->
-      <div class="pop_up">
-        <div class="popUp_cart">
+    <!-- pop up message for empty cart -->
+    <div class="pop_up">
+      <div class="popUp_cart">
+        <p>Cart</p>
+      </div>
+      <div class="popUp_empty">
+        <p>Your cart is empty</p>
+      </div>
+    </div>
+
+    <!-- pop up message for filled cart -->
+    <div class="filled_cont">
+      <div class="filled">
+        <div class="filled_cart">
           <p>Cart</p>
         </div>
-        <div class="popUp_empty">
-          <p>Your cart is empty</p>
+
+        <div class="filled_details">
+          <div class="filledImg">
+            <img src="./images/image-product-1.jpg" alt="" />
+          </div>
+
+          <div>
+            <div class="delete_cont">
+            <div class="filled_item"><p>Fall Limited Edition Sneakers</p></div>
+            <div class="delete"><img src="./images/icon-delete.svg" alt=""></div>
+          </div>
+            <div class="amount_details">
+              <div class="filled_price"><p>$125.00 x</p></div>
+              <div class="item_count">1</div>
+              <div class="total"><p>375.00</p></div>
+            </div>
+            <div class="filled_button">
+              <button>Checkout</button>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
     <main class="main">
       <div class="main_container">
@@ -63,13 +103,13 @@
               <img src="./images/image-product-1.jpg" alt="" class="images" />
             </div>
             <div>
-              <img src="./images/image-product-2.jpg" alt="" class="images"  />
+              <img src="./images/image-product-2.jpg" alt="" class="images" />
             </div>
             <div>
               <img src="./images/image-product-3.jpg" alt="" class="images" />
             </div>
             <div>
-              <img src="./images/image-product-4.jpg" alt="" class="images"  />
+              <img src="./images/image-product-4.jpg" alt="" class="images" />
             </div>
           </div>
         </div>
