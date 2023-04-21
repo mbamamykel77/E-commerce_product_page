@@ -16,11 +16,10 @@ let filledCart = document.querySelector(".filled");
 let itemCount = document.querySelector(".item_count");
 
 let totalAmount = document.querySelector(".total");
-let span = document.querySelector("#span");
+let cartNumber = document.querySelector("#span");
 
 let deleteCart = document.querySelector(".delete");
 let checkOut = document.querySelector(".filled_button");
-
 
 // function increment
 function incrementBtn() {
@@ -39,67 +38,39 @@ function decrementBtn() {
   display.textContent = counter;
   totalAmount.style.marginLeft = "0.5rem";
   totalAmount.style.color = "black";
-  if (counter == 0) {
-    span.style.display = "none";
-  }
 }
 decrement.addEventListener("click", decrementBtn);
 
-// function Delete cart
-function clearCart() {
-    span.style.display = "none";
-    filledCart.classList.remove("active1");
-    filledCart.style.marginTop = "-380px";
-    pop_up.classList.add("active");
-    setTimeout(() => {
-      pop_up.classList.remove("active");
-    }, 3000);
-  }
-  deleteCart.addEventListener("click", clearCart);
-
-// Action when cart is empty
+// function add to cart
 function addCart() {
-  if (counter === 0) {
+  if (counter > 0) {
+    // filledCart.classList.add("active1");
+    pop_up.classList.remove('active')
     itemCount.textContent = counter;
     let amount = 125 * Number(itemCount.textContent);
     totalAmount.textContent = "$ " + amount + ".00";
-    pop_up.classList.add("active");
-    filledCart.classList.remove("active1");
-    filledCart.style.marginTop = "-380px";
-    setTimeout(() => {
-      pop_up.classList.remove("active");
-    }, 3000);
-
-    // decrease cart content with item and init picked
-    if (counter !== 0) {
-      counter--;
-      itemCount.textContent = counter;
-      let amount = 125 * Number(itemCount.textContent);
-      totalAmount.textContent = "$ " + amount + ".00";
-    }
-    // increase cart content with item and unit picked
-  } else if (counter > 0) {
-    itemCount.textContent = counter;
-    let amount = 125 * Number(itemCount.textContent);
-    totalAmount.textContent = "$ " + amount + ".00";
-    span.style.display = "block";
-    span.textContent = counter;
+    cartNumber.style.display = "block";
+    cartNumber.textContent = counter;
   }
 }
 button.addEventListener("click", addCart);
 
-// Add pop_up when cart is filled
-function cartFilled() {
-  filledCart.classList.add("active1");
-  filledCart.style.marginTop = "380px";
-//   if (counter == 0){
-//     filledCart.style.display = 'none'
-//   }
-//   if(counter > 0){
-//     filledCart.style.display = 'block'
-//   }
+// function clear cart
+function clearCart() {
+  filledCart.classList.remove("active1");
+  cartNumber.style.display = "none";
+  pop_up.classList.add("active");
+  setTimeout(() => {
+    pop_up.classList.remove("active");
+  }, 3000);
 }
-cart.addEventListener("click", cartFilled);
+deleteCart.addEventListener("click", clearCart);
+
+// click on cart
+cart.addEventListener("click", () => {
+  filledCart.classList.toggle("active1");
+  filledCart.style.marginTop = "380px";
+});
 
 // function to select image display
 for (let i = 0; i < images.length; i++) {
