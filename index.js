@@ -45,12 +45,19 @@ decrement.addEventListener("click", decrementBtn);
 function addCart() {
   if (counter > 0) {
     // filledCart.classList.add("active1");
-    pop_up.classList.remove('active')
+    pop_up.classList.remove("active");
     itemCount.textContent = counter;
     let amount = 125 * Number(itemCount.textContent);
     totalAmount.textContent = "$ " + amount + ".00";
     cartNumber.style.display = "block";
     cartNumber.textContent = counter;
+    filledCart.classList.toggle("active1");
+    filledCart.style.marginTop = "380px";
+  } else {
+    pop_up.classList.add("active");
+    setTimeout(() => {
+      pop_up.classList.remove("active");
+    }, 3000);
   }
 }
 button.addEventListener("click", addCart);
@@ -67,10 +74,10 @@ function clearCart() {
 deleteCart.addEventListener("click", clearCart);
 
 // click on cart
-cart.addEventListener("click", () => {
-  filledCart.classList.toggle("active1");
-  filledCart.style.marginTop = "380px";
-});
+// cart.addEventListener("click", () => {
+//   filledCart.classList.toggle("active1");
+//   filledCart.style.marginTop = "380px";
+// });
 
 // function to select image display
 for (let i = 0; i < images.length; i++) {
